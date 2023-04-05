@@ -19,6 +19,7 @@ namespace ProjectHilton.Controllers
         {
             return context.Movies
                 .Where(x => x.Edited == "Yes")
+                .OrderBy(x => x.Title)
                 .ToArray();
         }
     }
